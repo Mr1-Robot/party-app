@@ -11,3 +11,143 @@
 .flexCenter {
   @apply flex items-center;
 }
+
+/* LOGIN FORM  */
+.login-input {
+  @apply block w-full p-2 bg-orange-100 text-black rounded-md border-[.5px] border-orange-300 placeholder:text-sm placeholder:font-light outline outline-transparent ring-2 ring-transparent focus:ring-mainColor hover:outline-mainColor hover:ring-mainColor focus:outline-mainColor  transition-all;
+}
+
+.login-field {
+  @apply flex flex-col items-start gap-2 w-full;
+}
+
+.heading {
+  @apply text-slate-800 text-3xl font-medium mb-10;
+}
+
+.main-btn {
+  @apply bg-mainColor w-full p-3 rounded-md text-white outline outline-transparent ring-2 ring-transparent focus:outline-slate-900 focus:ring-slate-900 mt-4 hover:bg-slate-900 hover:scale-[1.03] transition-all disabled:bg-orange-100;
+}
+
+.active-nav {
+  color: #f57600;
+}
+
+.registeration-form {
+  @apply flex flex-col gap-4 max-w-96 mx-auto;
+}
+
+#screen-start {
+  animation: movie 4s linear infinite;
+}
+
+#flowers {
+  animation: shacking 4s linear infinite;
+  transform-origin: center;
+}
+
+#tape {
+  animation: tape 4s linear infinite;
+}
+
+.msg::after {
+  content: "\A";
+  border-style: solid;
+  border-width: 8px 15px 8px 0;
+  border-color: transparent #f57600 transparent transparent;
+  position: absolute;
+  left: -15px;
+  top: 0.5rem;
+}
+
+.msg1::after {
+  content: "\A";
+  border-style: solid;
+  border-width: 8px 15px 8px 0;
+  border-color: transparent #f57600 transparent transparent;
+  position: absolute;
+  right: -15px;
+  top: 0.5rem;
+  transform: scaleX(-1);
+}
+
+/* VideoPlayer.css */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #ffbc7d;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+input[type="range"]:hover {
+  opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f57600;
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  background: #f57600;
+  cursor: pointer;
+}
+
+.video-field {
+  @apply placeholder:text-sm p-2 bg-orange-100 ring ring-transparent outline outline-transparent border-transparent focus:ring-mainColor transition rounded-sm border-[1px] border-orange-200;
+}
+
+.error-msg {
+  @apply text-sm text-red-500 bg-red-100 border-[1px] border-red-500 p-3 rounded-md;
+}
+
+@keyframes movie {
+  0% {
+    transform: translateX(1rem);
+  }
+  50% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(1rem);
+  }
+}
+
+@keyframes shacking {
+  0% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+@keyframes tape {
+  0% {
+    transform: translateY(0.2rem);
+  }
+  50% {
+    transform: translateY(-0.2rem);
+  }
+  100% {
+    transform: translateY(0.2rem);
+  }
+}
